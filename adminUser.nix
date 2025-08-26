@@ -37,9 +37,12 @@
   programs.zsh = {
     enable = true;
 
+    syntaxHighlighting.enable = true;
+    autosuggestions.enable = true;
+
     ohMyZsh = {
       enable = true;
-      plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
+      plugins = [ "git" ];
       theme = "avit";
     };
 
