@@ -100,8 +100,16 @@
     ninja
     python3
 
+    # CLI Visual
+    bat
+    eza
+    jq
+    btop
     fd  # alternative of find
     wl-clipboard  # clipboard provider for nvim
+    neovim
+
+    docker
 
     # GUI applications
     google-chrome

@@ -19,10 +19,19 @@
       # llvmPackages_21.lld
       # --
 
-      # IDE
-      vscode
+      # social
+      telegram-desktop
     ];
   };
+
+  # Development programs
+  environment.systemPackages = with pkgs; [
+    # IT utility
+    woeusb
+
+    # IDE
+    vscode
+  ];
 
   # configure zsh, plugins and aliases
   programs.zsh = {
