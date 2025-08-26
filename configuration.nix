@@ -105,6 +105,7 @@
     python3
 
     fd  # alternative of find
+    wl-clipboard  # clipboard provider for nvim
 
     # GUI applications
     google-chrome
