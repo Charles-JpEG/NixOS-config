@@ -1,6 +1,7 @@
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
 { config, pkgs, ... }:
+
 {
   users.users.charles = {
     isNormalUser = true;
@@ -21,5 +22,21 @@
       # IDE
       vscode
     ];
+  };
+
+  # configure zsh, plugins and aliases
+  programs.zsh = {
+    enable = true;
+
+    ohMyZsh = {
+      enable = true;
+      plugins = [ "git" "zsh-autosuggestions" "zsh-syntax-highlighting" ];
+      theme = "avit";
+    };
+
+    shellAliases = {
+      ll = "eza -l --icons";
+      la = "eza -la --icons";
+    };
   };
 }
