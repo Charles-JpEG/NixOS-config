@@ -104,7 +104,9 @@
     ninja
     python3
 
-    # GUI
+    fd  # alternative of find
+
+    # GUI applications
     google-chrome
   ];
 
