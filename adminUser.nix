@@ -19,8 +19,8 @@
       # llvmPackages_21.lld
       # --
 
-      # vscode
       vscode
+      qemu
 
       # social
       telegram-desktop
