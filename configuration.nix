@@ -83,6 +83,12 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+  # Configure power options
+  services.logind = {
+    lidSwitch = "ignore";
+    powerKey = "hibernate";
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 
