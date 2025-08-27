@@ -102,8 +102,9 @@
     cargo
 
     # Python dependencies
-    python313
-    python313Packages.numpy
+    (python313.withPackages (python-pkgs: with python-pkgs; [
+      numpy
+    ]))
 
     # CLI Visual
     bat
