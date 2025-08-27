@@ -49,7 +49,7 @@
     shellAliases = {
       ll = "eza -l --icons";
       la = "eza -la --icons";
-      showpath = "echo $PATH | tr ':' '\n'"
+      showpath = "echo $PATH | tr ':' '\n'";
     };
   };
 }

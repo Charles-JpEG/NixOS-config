@@ -105,9 +105,15 @@
     (python313.withPackages (python-pkgs: with python-pkgs; [
       # dependencies of howdy
       numpy
-      opencv-python
-      dlib
+      # dlib
+      # (opencv4.override {
+      #   enableGtk2 = true;
+      #   enableGtk3 = true;
+      # })
     ]))
+
+    pkg-config
+    gtk4
 
     # CLI Visual
     bat
