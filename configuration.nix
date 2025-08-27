@@ -117,6 +117,11 @@
     google-chrome
   ];
 
+  # Update PATH
+  environment.variables = {
+    PATH = "/usr/local/bin:$PATH";
+  };
+
   # Enable nix-command and flakes btw
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
