@@ -99,8 +99,11 @@
     libgcc
     cmake
     ninja
-    python3
     cargo
+
+    # Python dependencies
+    python313
+    python313Packages.numpy
 
     # CLI Visual
     bat
@@ -118,9 +121,9 @@
   ];
 
   # Update PATH
-  environment.variables = {
-    PATH = "/usr/local/bin:$PATH";
-  };
+  # environment.variables = {
+  #   PATH = "/usr/local/bin:$PATH";
+  # };
 
   # Enable nix-command and flakes btw
   nix.settings.experimental-features = [ "nix-command" "flakes"];
