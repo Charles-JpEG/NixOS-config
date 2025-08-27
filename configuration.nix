@@ -81,7 +81,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -117,8 +117,11 @@
     google-chrome
   ];
 
-  # Enable nix-command
+  # Enable nix-command and flakes btw
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  # Enable scheduled nix store optimiser
+  nix.optimise.automatic = true;
 
   # Set default editor  to vim, and config tabstop
   environment.variables.EDITOR = "vim";
@@ -156,5 +159,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
