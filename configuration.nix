@@ -81,25 +81,13 @@
     vim
     wget
     git
-    gcc
-    libgcc
-    cmake
-    ninja
-    cargo
-
+  ] ++ [
     # Python dependencies
     (python313.withPackages (python-pkgs: with python-pkgs; [
-      # dependencies of howdy
       numpy
-      # dlib
-      # (opencv4.override {
-      #   enableGtk2 = true;
-      #   enableGtk3 = true;
-      # })
     ]))
 
-    pkg-config
-    gtk4
+    docker
 
     # CLI Visual
     bat
@@ -111,7 +99,6 @@
     wl-clipboard  # clipboard provider for nvim
     neovim
 
-    docker
 
     # GUI applications
     google-chrome
