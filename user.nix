@@ -9,16 +9,6 @@
     extraGroups = [ "networkmanager" "docker" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-
-      # LLVM --
-      # (import ./build-llvm.nix { inherit pkgs; })  # custom build from github 
-      # llvmPackages_21.llvm
-      # llvmPackages_21.clang
-      # llvmPackages_21.clang-tools # e.g. clangd clang-format clang-tidy
-      # llvmPackages_21.lldb
-      # llvmPackages_21.lld
-      # --
-
       vscode
       jetbrains-toolbox
       jetbrains.webstorm
@@ -33,7 +23,7 @@
   # Development programs
   environment.systemPackages = with pkgs; [
     # IT utility
-    woeusb
+    woeusb  # Better bootable disk creator
   ];
 
   # configure zsh, plugins and aliases
@@ -49,7 +39,7 @@
       theme = "avit";
     };
 
-    shellAliases = {
+    shellAliases = {  # depends on cli-util
       ll = "eza -l --icons";
       la = "eza -la --icons";
       showpath = "echo $PATH | tr ':' '\n'";

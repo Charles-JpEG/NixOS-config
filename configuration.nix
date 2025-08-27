@@ -9,7 +9,11 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./user.nix
+      ./cli-util.nix
+      ./build-essentials.nix
+      ./power.nix
       ./audio.nix
+      ./gui.nix
       ./ssh-server.nix
       ./firewall.nix
       ./cloudflared.nix
@@ -69,9 +73,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -82,14 +83,12 @@
     wget
     git
   ] ++ [
+    docker
+    qemu
     # Python dependencies
     (python313.withPackages (python-pkgs: with python-pkgs; [
       numpy
     ]))
-
-    docker
-    # GUI applications
-    google-chrome
   ];
 
   # Update PATH
