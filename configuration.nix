@@ -87,6 +87,9 @@
   services.logind = {
     lidSwitch = "ignore";
     powerKey = "hibernate";
+
+    # kill user's processes at logout, false by default
+    killUserProcesses = false;
   };
 
   # Install firefox.
