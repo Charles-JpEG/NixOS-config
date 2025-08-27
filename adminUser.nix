@@ -20,6 +20,9 @@
       # --
 
       vscode
+      jetbrains-toolbox
+      jetbrains.webstorm
+      jetbrains.clion
       qemu
 
       # social
