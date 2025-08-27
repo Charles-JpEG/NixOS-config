@@ -99,6 +99,7 @@
     cmake
     ninja
     python3
+    cargo
 
     # CLI Visual
     bat
