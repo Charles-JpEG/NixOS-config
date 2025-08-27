@@ -88,18 +88,6 @@
     ]))
 
     docker
-
-    # CLI Visual
-    bat
-    eza
-    jq
-    btop
-    fd  # alternative of find
-    ripgrep  # blazing fast alternative of grep
-    wl-clipboard  # clipboard provider for nvim
-    neovim
-
-
     # GUI applications
     google-chrome
   ];

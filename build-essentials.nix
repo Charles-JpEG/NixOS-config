@@ -9,5 +9,5 @@
     libgcc
     pkg-config
     cargo
-  ]
+  ];
 }
