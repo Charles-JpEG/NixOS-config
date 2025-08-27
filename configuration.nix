@@ -103,7 +103,10 @@
 
     # Python dependencies
     (python313.withPackages (python-pkgs: with python-pkgs; [
+      # dependencies of howdy
       numpy
+      opencv-python
+      dlib
     ]))
 
     # CLI Visual
