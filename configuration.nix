@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./openssh-server.nix
       ./adminUser.nix
+      ./firewall.nix
     ];
 
   # Bootloader.
