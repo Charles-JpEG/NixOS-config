@@ -9,20 +9,13 @@
     extraGroups = [ "networkmanager" "docker" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      vscode
-      jetbrains-toolbox
-      jetbrains.webstorm
-      jetbrains.clion
-
-      # social
-      telegram-desktop
+      # More packages here
     ];
   };
 
   # Development programs
   environment.systemPackages = with pkgs; [
-    # IT utility
-    woeusb  # Better bootable disk creator
+    # More packages here
   ];
 
   # configure zsh, plugins and aliases

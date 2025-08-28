@@ -11,12 +11,7 @@
       ./user.nix
       ./cli-util.nix
       ./build-essentials.nix
-      ./power.nix
-      ./audio.nix
-      ./gui.nix
-      ./ssh-server.nix
       ./firewall.nix
-      ./cloudflared.nix
     ];
 
   # Bootloader.
