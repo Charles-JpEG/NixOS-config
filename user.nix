@@ -13,7 +13,6 @@
       jetbrains-toolbox
       jetbrains.webstorm
       jetbrains.clion
-      qemu
 
       # social
       telegram-desktop
