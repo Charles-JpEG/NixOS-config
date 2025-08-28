@@ -13,10 +13,24 @@
     ];
   };
 
+  # wsl
+  wsl.defaultUser = "charles";
+
   # Development programs
   environment.systemPackages = with pkgs; [
     # More packages here
   ];
+
+  # set /etc/vimrc
+  environment.etc."vimrc".text = ''
+    set tabstop=2
+    set shiftwidth=2
+    set expandtab
+    set softtabstop=2
+    # set autoindent
+    set smartindent
+  '';
+
 
   # configure zsh, plugins and aliases
   programs.zsh = {

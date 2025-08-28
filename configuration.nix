@@ -7,16 +7,15 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      <nixos-wsl/modules>
       ./user.nix
       ./cli-util.nix
       ./build-essentials.nix
       ./firewall.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # WSL
+  wsl.enable = true; 
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -52,10 +51,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -86,11 +81,6 @@
     ]))
   ];
 
-  # Update PATH
-  # environment.variables = {
-  #   PATH = "/usr/local/bin:$PATH";
-  # };
-
   # Enable nix-command and flakes btw
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
@@ -105,32 +95,9 @@
     Defaults editor = /run/current-system/sw/bin/vim
   '';
   
-  environment.etc."vimrc".text = ''
-    set tabstop=2
-    set shiftwidth=2
-    set expandtab
-    set softtabstop=2
-    # set autoindent
-    set smartindent
-  '';
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
   virtualisation.docker.enable = true;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }
