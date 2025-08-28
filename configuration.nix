@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # "${home-manager}/nixos"
       ./user.nix
       ./cli-util.nix
       ./build-essentials.nix
