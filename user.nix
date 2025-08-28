@@ -9,6 +9,7 @@
     extraGroups = [ "networkmanager" "docker" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      claude-code
     ];
   };
 

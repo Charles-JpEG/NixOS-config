@@ -91,6 +91,7 @@
     (python313.withPackages (python-pkgs: with python-pkgs; [
       numpy
     ]))
+    nodejs_24
   ];
 
   # Update PATH
