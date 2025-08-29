@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # "${home-manager}/nixos"
       ./user.nix
       ./cli-util.nix
       ./build-essentials.nix
@@ -27,6 +26,14 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Configure swap file
+  swapDevices = [
+    {
+      device = "/home/swap";
+      size = 65536;
+    }
+  ];
 
   networking.hostName = "Nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
