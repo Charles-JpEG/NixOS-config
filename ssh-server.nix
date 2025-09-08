@@ -6,6 +6,8 @@
 
     # ports = [ 22 ];  # default port
     settings = {
+      AcceptEnv = "LANG LC_* TERM_PROGRAM";
+
       # Disable root login
       PermitRootLogin = "no";
       
