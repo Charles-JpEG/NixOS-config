@@ -27,6 +27,10 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Make NixOS more compatible
+  services.envfs.enable = true;
+  programs.nix-ld.enable = true;
+
   # Configure swap file
   swapDevices = [
     {
