@@ -2,7 +2,7 @@
 { config, pkgs, ... }:
 {
   services.openssh = {
-    enable = true;
+    enable = false;
 
     # ports = [ 22 ];  # default port
     settings = {
