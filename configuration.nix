@@ -29,14 +29,6 @@
   services.envfs.enable = true;
   programs.nix-ld.enable = true;
 
-  # Configure swap file
-  swapDevices = [
-    {
-      device = "/home/swap";
-      size = 65536;
-    }
-  ];
-
   networking.hostName = "Nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -109,7 +101,7 @@
   # };
 
   # Enable nix-command and flakes btw
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable scheduled nix store optimiser
   nix.optimise.automatic = true;
