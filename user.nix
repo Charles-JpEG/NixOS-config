@@ -13,6 +13,16 @@
     ];
   };
 
+  # configure git default option
+  programs.git = {
+    enable = true;
+    config = {
+      init.defaultBranch = "master";
+      user.name = "Charles Liu";
+      user.email = "charles2560710@gmail.com";
+    };
+  };
+
   # configure zsh, plugins and aliases
   programs.zsh = {
     enable = true;

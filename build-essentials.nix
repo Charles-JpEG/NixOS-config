@@ -8,6 +8,6 @@
     # Extra
     libgcc
     pkg-config
-    cargo
+    rustup
   ];
 }

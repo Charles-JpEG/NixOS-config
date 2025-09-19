@@ -85,6 +85,7 @@
     vim
     wget
     git
+    unzip
   ] ++ [
     docker
     qemu
