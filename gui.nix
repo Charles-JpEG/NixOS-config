@@ -8,6 +8,8 @@
     jetbrains-toolbox
     jetbrains.webstorm
     jetbrains.clion
+    # Terminal App
+    alacritty
     # social
     telegram-desktop
     # Not actually graphical app
