@@ -1,4 +1,3 @@
-
 # Define a user account. Don't forget to set a password with ‘passwd’.
 { config, pkgs, ... }:
 
@@ -9,28 +8,19 @@
     extraGroups = [ "networkmanager" "docker" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      # More packages here
+      claude-code
     ];
   };
 
-  # wsl
-  wsl.defaultUser = "charles";
-
-  # Development programs
-  environment.systemPackages = with pkgs; [
-    # More packages here
-  ];
-
-  # set /etc/vimrc
-  environment.etc."vimrc".text = ''
-    set tabstop=2
-    set shiftwidth=2
-    set expandtab
-    set softtabstop=2
-    # set autoindent
-    set smartindent
-  '';
-
+  # configure git default option
+  programs.git = {
+    enable = true;
+    config = {
+      init.defaultBranch = "master";
+      user.name = "Charles Liu";
+      user.email = "charles2560710@gmail.com";
+    };
+  };
 
   # configure zsh, plugins and aliases
   programs.zsh = {
@@ -52,3 +42,4 @@
     };
   };
 }
+
