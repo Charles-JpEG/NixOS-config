@@ -1,4 +1,3 @@
-
 # Define a user account. Don't forget to set a password with ‘passwd’.
 { config, pkgs, ... }:
 
@@ -9,14 +8,9 @@
     extraGroups = [ "networkmanager" "docker" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      # More packages here
+      claude-code
     ];
   };
-
-  # Development programs
-  environment.systemPackages = with pkgs; [
-    # More packages here
-  ];
 
   # configure zsh, plugins and aliases
   programs.zsh = {
@@ -35,6 +29,7 @@
       ll = "eza -l --icons";
       la = "eza -la --icons";
       showpath = "echo $PATH | tr ':' '\n'";
+      caffeinate = "systemd-inhibit --what=sleep:idle --who='ServerKeepAlive' --why='keep computer alive' sleep infinity";
     };
   };
 }

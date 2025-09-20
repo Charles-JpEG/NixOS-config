@@ -11,15 +11,23 @@
       ./user.nix
       ./cli-util.nix
       ./build-essentials.nix
+      # ./power.nix
+      # ./cloudflared.nix
+      ./ssh-server.nix
       ./firewall.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.configurationLimit = 5;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Make NixOS more compatible
+  services.envfs.enable = true;
+  programs.nix-ld.enable = true;
 
   networking.hostName = "Nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -77,6 +85,7 @@
     vim
     wget
     git
+    unzip
   ] ++ [
     docker
     qemu
@@ -84,6 +93,7 @@
     (python313.withPackages (python-pkgs: with python-pkgs; [
       numpy
     ]))
+    nodejs_24
   ];
 
   # Update PATH
@@ -92,7 +102,7 @@
   # };
 
   # Enable nix-command and flakes btw
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable scheduled nix store optimiser
   nix.optimise.automatic = true;
@@ -110,7 +120,6 @@
     set shiftwidth=2
     set expandtab
     set softtabstop=2
-    # set autoindent
     set smartindent
   '';
 
