@@ -16,7 +16,6 @@
     terminal = "screen-256color";
     plugins = with pkgs.tmuxPlugins; [
       nord
-      continuum
       # tmux-floax
     ];
     extraConfigBeforePlugins = ''
