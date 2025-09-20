@@ -16,6 +16,7 @@
       KbdInteractiveAuthentication = false;
       PubkeyAuthentication = true;
       AuthenticationMethods = "publickey";
+      ChallengeResponseAuthentication = false;
       
       # Other security settings
       PermitEmptyPasswords = false;
