@@ -2,6 +2,11 @@
 { config, pkgs, lib, ... }:
 
 {
+  boot.kernelParams = [
+    "snd-intel-dspcfg.dsp_driver=1"
+    "snd_hda_intel.dmic_detect=0"
+  ];
+
   # Install firmwares
   hardware.firmware = with pkgs; [
     linux-firmware
