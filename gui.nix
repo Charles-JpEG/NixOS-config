@@ -12,9 +12,8 @@
     alacritty
     # social
     telegram-desktop
-    # Not actually graphical app
-    woeusb  # Better bootable disk creator
   ];
   # Install firefox
   programs.firefox.enable = true;
+  programs.steam.enable = true;
 }
