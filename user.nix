@@ -1,4 +1,3 @@
-
 # Define a user account. Don't forget to set a password with ‘passwd’.
 { config, pkgs, ... }:
 
@@ -40,6 +39,7 @@
       ll = "eza -l --icons";
       la = "eza -la --icons";
       showpath = "echo $PATH | tr ':' '\n'";
+      caffeinate = "systemd-inhibit --what=sleep:idle --who='ServerKeepAlive' --why='keep computer alive' sleep infinity";
     };
   };
 }
