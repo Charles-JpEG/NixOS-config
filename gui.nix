@@ -8,6 +8,8 @@
     jetbrains-toolbox
     jetbrains.webstorm
     jetbrains.clion
+    texstudio
+    texliveFull
     # Terminal App
     alacritty
     # social
