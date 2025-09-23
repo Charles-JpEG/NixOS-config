@@ -123,7 +123,7 @@
   environment.variables.EDITOR = "vim";
   
   security.sudo.extraConfig = ''
-    Defaults env_keep += "EDITOR"
+    Defaults env_keep += "EDITOR WAYLAND_DISPLAY XDG_RUNTIME_DIR"
     Defaults editor = /run/current-system/sw/bin/vim
   '';
   
