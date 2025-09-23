@@ -19,6 +19,7 @@
       init.defaultBranch = "master";
       user.name = "Charles Liu";
       user.email = "charles2560710@gmail.com";
+      pull.rebase = false;
     };
   };
 
