@@ -44,14 +44,27 @@
     };
   };
 
+  programs.fish = {
+    enable = true;
+    promptInit = ''
+      starship preset gruvbox-rainbow -o ~/.config/starship.toml
+      eval $(starship init fish)
+    '';
+  };
+
 
   users.users.dev = {
     isNormalUser = true;
     description = "Develop user with no privilege";
     extraGroups = [ "docker" ];
-    shell = pkgs.bash;
+    shell = pkgs.fish;
     packages = with pkgs; [
-      # Nothing
+      starship
     ];
   };
+
+  # programs.bash.promptInit = ''
+  #   starship preset gruvbox-rainbow -o ~/.config/starship.toml
+  #   eval $(starship init bash)
+  # '';
 }
