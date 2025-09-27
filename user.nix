@@ -43,4 +43,15 @@
       caffeinate = "systemd-inhibit --what=sleep:idle --who='ServerKeepAlive' --why='keep computer alive' sleep infinity";
     };
   };
+
+
+  users.users.dev = {
+    isNormalUser = true;
+    description = "Develop user with no privilege";
+    extraGroups = [ "docker" ];
+    shell = pkgs.bash;
+    packages = with pkgs; [
+      # Nothing
+    ];
+  };
 }
