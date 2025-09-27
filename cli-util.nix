@@ -10,6 +10,7 @@
     ripgrep  # blazing fast alternative of grep
     wl-clipboard  # clipboard provider for nvim
     neovim
+    starship
   ];
   programs.tmux = {
     enable = true;
@@ -29,6 +30,19 @@
 
       # open windows from cwd
       bind c new-window -c "#{pane_current_path}"
+    '';
+  };
+
+  programs.zoxide = {
+    enable = true;
+  };
+
+  programs.fish = {
+    enable = true;
+    promptInit = ''
+      starship preset gruvbox-rainbow -o ~/.config/starship.toml
+      eval $(starship init fish)
+      zoxide init fish | source
     '';
   };
 }
