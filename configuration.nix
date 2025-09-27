@@ -14,6 +14,7 @@
       # ./power.nix
       ./ssh-server.nix
       ./firewall.nix
+      ./proxy.nix
       ./cloudflared.nix
     ];
 
