@@ -38,6 +38,10 @@
     enable = true;
   };
 
+  programs.yazi = {
+    enable = true;
+  };
+
   # configure zsh, plugins and aliases
   programs.zsh = {
     enable = true;
