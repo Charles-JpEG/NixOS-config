@@ -16,6 +16,7 @@
       ./gui.nix
       ./ssh-server.nix
       ./firewall.nix
+      ./proxy.nix
       ./cloudflared.nix
     ];
 
@@ -104,8 +105,10 @@
     # Python dependencies
     (python313.withPackages (python-pkgs: with python-pkgs; [
       numpy
+      pytest
     ]))
     nodejs_24
+    powershell
   ];
 
   # Update PATH
@@ -114,7 +117,7 @@
   # };
 
   # Enable nix-command and flakes btw
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable scheduled nix store optimiser
   nix.optimise.automatic = true;
