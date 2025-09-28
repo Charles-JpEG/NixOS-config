@@ -97,6 +97,7 @@
       numpy
     ]))
     nodejs_24
+    powershell
   ];
 
   # Update PATH
