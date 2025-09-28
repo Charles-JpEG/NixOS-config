@@ -31,9 +31,4 @@
     packages = with pkgs; [
     ];
   };
-
-  # programs.bash.promptInit = ''
-  #   starship preset gruvbox-rainbow -o ~/.config/starship.toml
-  #   eval $(starship init bash)
-  # '';
 }
