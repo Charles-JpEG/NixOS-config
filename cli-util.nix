@@ -11,6 +11,7 @@
     wl-clipboard  # clipboard provider for nvim
     neovim
     starship
+    oh-my-posh
   ];
   programs.tmux = {
     enable = true;
