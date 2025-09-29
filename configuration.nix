@@ -109,6 +109,7 @@
     ]))
     nodejs_24
     powershell
+    dash
   ];
 
   # Update PATH
