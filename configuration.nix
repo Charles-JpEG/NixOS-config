@@ -94,6 +94,7 @@
     qemu
     # Python dependencies
     (python313.withPackages (python-pkgs: with python-pkgs; [
+      pytest
       numpy
     ]))
     nodejs_24
