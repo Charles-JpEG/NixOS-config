@@ -71,5 +71,11 @@
       eval $(starship init fish)
       zoxide init fish | source
     '';
+    shellAliases = {  # depends on cli-util
+      ll = "eza -l --icons";
+      la = "eza -la --icons";
+      showpath = "echo $PATH | tr '[[:space:]]+' '\n'";
+      caffeinate = "systemd-inhibit --what=sleep:idle --who='ServerKeepAlive' --why='keep computer alive' sleep infinity";
+    };
   };
 }
