@@ -101,8 +101,7 @@
     file
   ] ++ [
     docker
-    qemu
-    # Python dependencies
+    # qemu
     (python313.withPackages (python-pkgs: with python-pkgs; [
       numpy
       pytest
