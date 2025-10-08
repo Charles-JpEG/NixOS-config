@@ -5,6 +5,7 @@
     google-chrome
     # IDE
     vscode
+    code-cursor
     zed-editor-fhs
     jetbrains-toolbox
     jetbrains.webstorm
@@ -13,6 +14,8 @@
     texliveFull
     # Terminal App
     alacritty
+    kitty
+    warp-terminal
     # social
     telegram-desktop
   ];

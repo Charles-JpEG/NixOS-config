@@ -6,7 +6,7 @@
     isNormalUser = true;
     description = "Charles Liu";
     extraGroups = [ "networkmanager" "docker" "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     packages = with pkgs; [
       claude-code
     ];

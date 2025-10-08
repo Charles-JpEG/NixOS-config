@@ -68,6 +68,7 @@
     enable = true;
     promptInit = ''
       starship preset gruvbox-rainbow -o ~/.config/starship.toml
+      [ -z $TERM_PROGRAM ] && starship preset plain-text-symbols -o ~/.config/starship.toml
       eval $(starship init fish)
       zoxide init fish | source
     '';
